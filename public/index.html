@@ -23,6 +23,7 @@
         // GETリクエスト（クエリー）
         async getData() {
           // 自前のAPサーバーからfetchしてみる
+          const res = await fetch('http://localhost:8000/api');
           this.data = await res.json();
           console.log(this.data.message);
         }
